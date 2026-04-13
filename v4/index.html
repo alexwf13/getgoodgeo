@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO: Get Found by AI Search | ChatGPT, Gemini, Perplexity Optimization | Wonderflow</title>
+<meta name="description" content="GEO optimization: make AI recommend your brand. ChatGPT, Google AI, Gemini, Perplexity, Claude. AI visibility audit in 48 hours. GEO + SEO growth strategy.">
+<meta name="theme-color" content="#EFF5F9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+<style>
+/* ========================================================
+   GetGoodGEO v2 — Editorial Authority
+   Design: Refined B2B · Bloomberg meets AI Agency
+   Fonts: Space Grotesk · Inter · JetBrains Mono
+   ======================================================== */
+
+/* === TOKENS === */
+:root {
+  --brand-050: #EFF5F9;
+  --brand-100: #E0EFF7;
+  --brand-200: #C4E8FE;
+  --brand-400: #93D1F7;
+  --brand-700: #198ED5;
+  --brand-900: #0265A1;
+  --black: #1C1917;
+  --gray-900: #1C1917;
+  --gray-800: #292524;
+  --gray-700: #44403C;
+  --gray-500: #78716C;
+  --gray-300: #D6D3D1;
+  --gray-100: #E7E5E4;
+  --white: #FFFFFF;
+  --accent-yellow: #B45309;
+  --accent-green: #059669;
+  --accent-red: #DC2626;
+  --container: 1120px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-elevated: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-glow: 0 0 0 1px rgba(147,209,247,0.25);
+  --font-display: 'Calistoga', 'Georgia', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--brand-050);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* === TYPOGRAPHY === */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); }
+h3 { font-size: 1.1rem; line-height: 1.3; letter-spacing: 0; }
+p { font-size: 1.0625rem; line-height: 1.7; color: var(--gray-700); }
+strong { color: var(--black); }
+
+/* === LAYOUT === */
+.c { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+section { padding: 96px 0; }
+
+/* === LABEL === */
+.label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  padding: 6px 14px;
+  border: 1.5px solid var(--brand-400);
+  border-radius: 100px;
+  margin-bottom: 20px;
+  background: rgba(147,209,247,0.08);
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 28px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.btn--p {
+  background: var(--accent-yellow);
+  color: var(--black);
+  box-shadow: 0 2px 12px rgba(252,216,77,0.25);
+}
+.btn--p:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(252,216,77,0.35);
+}
+.btn--p:active { transform: translateY(0); }
+.btn--o {
+  background: transparent;
+  color: var(--black);
+  border: 1.5px solid var(--gray-300);
+}
+.btn--o:hover {
+  border-color: var(--black);
+  background: var(--white);
+}
+
+/* Dark context buttons */
+.dark .btn--o {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.2);
+}
+.dark .btn--o:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.05);
+}
+
+/* === SCROLL PROGRESS === */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent-yellow);
+  z-index: 200;
+  transition: width 0.05s linear;
+}
+
+/* === NAVIGATION === */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(239,245,249,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  z-index: 100;
+  padding: 0;
+}
+.nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.nav__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a:not(.btn) {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--gray-700);
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:not(.btn):hover { color: var(--black); }
+.nav-links .btn { padding: 8px 20px; min-height: auto; font-size: 0.78rem; }
+
+/* Burger */
+.burger { display: none; background: none; border: none; cursor: pointer; padding: 4px; width: 32px; height: 32px; position: relative; }
+.burger span { display: block; width: 20px; height: 2px; background: var(--black); position: absolute; left: 6px; transition: all 0.3s ease; border-radius: 1px; }
+.burger span:nth-child(1) { top: 9px; }
+.burger span:nth-child(2) { top: 15px; }
+.burger span:nth-child(3) { top: 21px; }
+.burger.active span:nth-child(1) { transform: rotate(45deg); top: 15px; }
+.burger.active span:nth-child(2) { opacity: 0; }
+.burger.active span:nth-child(3) { transform: rotate(-45deg); top: 15px; }
+.mobile-menu {
+  display: none; position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-100);
+  padding: 12px 0;
+  box-shadow: var(--shadow-elevated);
+}
+.mobile-menu.active { display: block; }
+.mobile-menu a {
+  display: block; padding: 12px 24px;
+  font-size: 0.9rem; font-weight: 500; color: var(--black);
+}
+.mobile-menu a:hover { background: var(--brand-050); color: var(--brand-700); }
+.burger-cta { display: none !important; }
+
+/* === HERO === */
+.hero { padding: 80px 0 64px; position: relative; }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.hero h1 { margin-bottom: 20px; }
+.hero h1 .accent { color: var(--accent-green); }
+.hero__sub {
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin-bottom: 32px;
+  color: var(--gray-700);
+}
+.hero__acts { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero__micro {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+}
+
+/* Hero stats */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+.hero-stat {
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border-left: 3px solid var(--brand-400);
+}
+.hero-stat:nth-child(2) { border-left-color: var(--brand-700); }
+.hero-stat:nth-child(3) { border-left-color: var(--accent-green); }
+.hero-stat__v {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.hero-stat__l { font-size: 0.75rem; color: var(--gray-700); margin-top: 4px; line-height: 1.4; }
+
+/* Chat window */
+.chat-window {
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+}
+.chat-bar {
+  display: flex;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  background: var(--brand-050);
+}
+.chat-bar span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+.chat-bar span:nth-child(1) { background: var(--accent-red); }
+.chat-bar span:nth-child(2) { background: var(--accent-yellow); }
+.chat-bar span:nth-child(3) { background: var(--accent-green); }
+.chat-body { padding: 20px; }
+.chat-msg {
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin-bottom: 12px;
+  max-width: 90%;
+  border-radius: var(--radius-md);
+  color: var(--black);
+}
+.chat-msg--user {
+  background: var(--brand-050);
+  margin-left: auto;
+  text-align: right;
+  border: 1px solid var(--brand-200);
+}
+.chat-msg--user::before {
+  content: 'You';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+.chat-msg--ai {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-card);
+}
+.chat-msg--ai::before {
+  content: 'AI Assistant';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-700);
+  margin-bottom: 4px;
+}
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+  font-weight: 700;
+  color: var(--brand-400);
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* === DIVIDER === */
+.divider-line {
+  max-width: var(--container);
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gray-100), transparent);
+}
+
+/* === STATS SECTION === */
+.stats-bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.stat {
+  padding: 28px 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+.stat--wide { grid-column: span 2; }
+.stat--highlight { border-color: var(--brand-400); }
+.stat__n {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.stat--wide .stat__n { font-size: 2.6rem; }
+.stat__l { font-size: 0.8rem; color: var(--gray-700); margin-top: 6px; line-height: 1.4; }
+.stat__s {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--gray-500);
+  padding: 3px 8px;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+}
+
+/* Accent bar on stat */
+.stat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--brand-400);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.stat--highlight::before { opacity: 1; }
+
+/* Note callout */
+.note {
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--brand-200);
+  border-left: 3px solid var(--brand-400);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* === CONSEQUENCE CARDS === */
+.cards-stagger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.card {
+  padding: 32px 24px;
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: all 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+.card__tag-float {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+.card--red .card__tag-float { background: rgba(253,78,44,0.08); color: var(--accent-red); border: 1px solid rgba(253,78,44,0.15); }
+.card--yellow .card__tag-float { background: rgba(252,216,77,0.12); color: #B5940A; border: 1px solid rgba(252,216,77,0.3); }
+.card--dark .card__tag-float { background: rgba(0,0,0,0.04); color: var(--black); border: 1px solid var(--gray-100); }
+.card h3 { margin-bottom: 8px; }
+.card p { font-size: 0.88rem; color: var(--gray-700); }
+
+/* Escalation — top border accent */
+.card--red { border-top: 3px solid var(--accent-red); }
+.card--yellow { border-top: 3px solid var(--accent-yellow); }
+.card--dark { border-top: 3px solid var(--black); }
+
+/* Tizer */
+.tizer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.tizer__num {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--accent-green);
+}
+.tizer__text { font-size: 0.88rem; color: var(--gray-700); }
+.tizer__text a { font-weight: 600; color: var(--brand-700); text-decoration: underline; }
+
+/* === COMPARISON === */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  margin-top: 40px;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.compare__divider { background: var(--gray-100); }
+.compare__col { display: flex; flex-direction: column; }
+.compare__col--geo { background: var(--white); }
+.compare__col--seo { background: var(--brand-050); }
+.compare__tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.compare__col--geo .compare__tag { background: var(--brand-700); color: var(--white); }
+.compare__col--seo .compare__tag { background: var(--brand-050); color: var(--gray-700); }
+.compare__item {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  flex: 1;
+}
+.compare__item:last-child { border-bottom: none; }
+.compare__item strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+/* === TIMELINE === */
+.timeline-v {
+  position: relative;
+  padding-left: 56px;
+  margin-top: 40px;
+}
+.timeline-v__line {
+  position: absolute;
+  top: 0; bottom: 0; left: 22px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--brand-400), var(--brand-200));
+}
+.tl-step { position: relative; margin-bottom: 20px; }
+.tl-step__marker {
+  position: absolute;
+  left: -56px; top: 24px;
+  width: 36px; height: 36px;
+  background: var(--white);
+  border: 2px solid var(--brand-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--brand-700);
+  z-index: 2;
+  transition: all 0.2s;
+}
+.tl-step:hover .tl-step__marker {
+  background: var(--accent-yellow);
+  color: var(--black);
+  border-color: var(--accent-yellow);
+}
+.tl-step__content {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s;
+}
+.tl-step__content:hover {
+  box-shadow: var(--shadow-elevated);
+}
+.tl-step h3 { margin-bottom: 6px; }
+.tl-step p { font-size: 0.88rem; color: var(--gray-700); }
+
+/* === DARK SECTIONS === */
+.dark {
+  background: var(--gray-900);
+  color: var(--white);
+  border-top: none;
+  border-bottom: none;
+}
+.dark h2 { color: var(--white); }
+.dark p { color: rgba(255,255,255,0.65); }
+.dark .label {
+  color: var(--brand-400);
+  border-color: rgba(147,209,247,0.3);
+  background: rgba(147,209,247,0.05);
+}
+
+/* CTA Mid */
+.cta-mid { text-align: center; }
+.cta-mid .features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin: 40px auto;
+  text-align: left;
+}
+.feat {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+.feat:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.03); }
+.feat strong { color: var(--white); display: block; margin-bottom: 4px; font-size: 0.9rem; }
+.feat-icon {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(147,209,247,0.12);
+  border: 1px solid rgba(147,209,247,0.2);
+  border-radius: var(--radius-sm);
+}
+.feat-icon iconify-icon { font-size: 1.1rem; color: var(--brand-400); }
+.cta-mid .btn { margin-top: 8px; }
+.cta-mid .micro { font-family: var(--font-mono); font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 12px; }
+
+/* === CASE STUDY METRICS === */
+.metrics-dash {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-top: 40px;
+}
+.metric {
+  padding: 24px;
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.metric--hero {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-color: var(--brand-400);
+  background: linear-gradient(135deg, var(--white), var(--brand-050));
+}
+.metric__v {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--black);
+}
+.metric--hero .metric__v { font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--brand-700); }
+.metric:not(.metric--hero) .metric__v { font-size: 1.5rem; color: var(--brand-900); }
+.metric__l { font-size: 0.78rem; color: var(--gray-700); margin-top: 4px; }
+.metric--hero .metric__l { font-size: 0.85rem; color: var(--gray-700); }
+
+/* Progress timeline */
+.progress-tl {
+  display: flex;
+  margin-top: 24px;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.progress-tl__seg {
+  flex: 1;
+  text-align: center;
+  padding: 16px 8px;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+.progress-tl__seg:last-child { border-right: none; }
+.progress-tl__seg:nth-child(1) { background: var(--gray-800); }
+.progress-tl__seg:nth-child(2) { background: var(--brand-200); }
+.progress-tl__seg:nth-child(3) { background: var(--brand-400); }
+.progress-tl__seg:nth-child(4) { background: var(--brand-700); }
+.progress-tl__seg:nth-child(5) { background: var(--accent-green); }
+.progress-tl__v {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.progress-tl__seg:nth-child(1) .progress-tl__v,
+.progress-tl__seg:nth-child(4) .progress-tl__v,
+.progress-tl__seg:nth-child(5) .progress-tl__v { color: var(--white); }
+.progress-tl__l { font-size: 0.65rem; margin-top: 2px; }
+.progress-tl__seg:nth-child(1) .progress-tl__l { color: rgba(255,255,255,0.6); }
+.progress-tl__seg:nth-child(4) .progress-tl__l,
+.progress-tl__seg:nth-child(5) .progress-tl__l { color: rgba(255,255,255,0.75); }
+
+/* Quote */
+.quote-block {
+  margin-top: 32px;
+  padding: 32px 32px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-left: 3px solid var(--brand-400);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.quote-block__mark {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--brand-200);
+  margin-bottom: -10px;
+}
+.quote-block__text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-700);
+  font-style: italic;
+}
+.quote-block cite { display: block; margin-top: 12px; font-style: normal; font-size: 0.82rem; color: var(--gray-500); }
+
+/* === TRUST === */
+.trust-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.niche, .plat {
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+}
+.niche {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  color: var(--black);
+}
+.plat {
+  background: var(--white);
+  border: 1px solid var(--brand-200);
+  color: var(--brand-700);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.platforms { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.founders { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.founder {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.founder__photo {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--brand-050);
+  border: 2px solid var(--brand-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand-700);
+  flex-shrink: 0;
+}
+.founder__name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
+.founder__role { font-family: var(--font-mono); font-size: 0.72rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+.founder__bio { font-size: 0.85rem; color: var(--gray-700); margin-top: 8px; line-height: 1.55; }
+.founder__bio a { color: var(--brand-700); text-decoration: underline; }
+
+/* === CALCULATOR === */
+.calc-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+.calc-row { margin-bottom: 28px; }
+.calc-label {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+.calc-val {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--brand-700);
+}
+.calc-range {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.calc-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px; height: 20px;
+  background: var(--accent-yellow);
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  cursor: pointer;
+}
+.calc-hint { font-size: 0.78rem; color: var(--gray-500); margin-top: 6px; }
+.calc-out {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  position: sticky;
+  top: 80px;
+}
+.calc-res-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin-bottom: 24px;
+}
+.calc-metric { margin-bottom: 20px; }
+.calc-metric__v {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--white);
+}
+.calc-metric--losses .calc-metric__v { color: var(--accent-red); }
+.calc-metric--roi .calc-metric__v { color: var(--accent-green); }
+.calc-metric__l { font-size: 0.78rem; color: var(--gray-500); margin-top: 2px; }
+
+/* === ANTI-OFFER === */
+#anti-offer {
+  background: var(--gray-900);
+  color: var(--white);
+}
+#anti-offer .label {
+  color: var(--accent-red);
+  border-color: rgba(253,78,44,0.3);
+  background: rgba(253,78,44,0.05);
+}
+.anti-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+.anti-card {
+  padding: 32px 24px;
+  background: var(--gray-800);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+.anti-card:hover { border-color: rgba(255,255,255,0.12); }
+.anti-icon { color: var(--accent-red); font-size: 1.4rem; margin-bottom: 16px; display: block; }
+.anti-card h3 { color: var(--white); margin-bottom: 8px; }
+.anti-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); }
+
+/* === PACKAGES === */
+.packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; align-items: start; }
+.pkg {
+  padding: 32px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: all 0.2s;
+}
+.pkg:hover { box-shadow: var(--shadow-elevated); }
+.pkg--featured {
+  border-color: var(--brand-400);
+  box-shadow: var(--shadow-elevated);
+  transform: scale(1.02);
+  z-index: 1;
+}
+.pkg--featured:hover { transform: scale(1.03); }
+.pkg--locked { opacity: 0.6; }
+.pkg__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  background: rgba(147,209,247,0.1);
+  color: var(--brand-700);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+.pkg h3 { margin-bottom: 6px; }
+.pkg__desc { font-size: 0.85rem; color: var(--gray-700); margin-bottom: 16px; }
+.pkg__price-strip { margin-bottom: 20px; }
+.pkg__price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+.pkg__price span { font-size: 0.82rem; font-weight: 400; color: var(--gray-500); }
+.pkg__list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+.pkg__list li {
+  padding: 6px 0;
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+  padding-left: 18px;
+  position: relative;
+}
+.pkg__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--brand-400);
+  font-size: 0.85rem;
+}
+.pkg .btn { width: 100%; justify-content: center; }
+
+/* === FAQ === */
+.faq-list { margin-top: 32px; max-width: 720px; }
+.faq-item {
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--black);
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--brand-700); }
+.faq-q__icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gray-500);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.active .faq-q__icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-item.active .faq-a { max-height: 300px; }
+.faq-a__inner {
+  padding: 0 0 20px;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+/* === CTA FINAL === */
+.cta-final {
+  background: var(--gray-900);
+  color: var(--white);
+  text-align: center;
+}
+.cta-final h2 { color: var(--white); }
+.cta-final p { color: rgba(255,255,255,0.6); }
+.cta-final .label {
+  color: var(--accent-yellow);
+  border-color: rgba(252,216,77,0.3);
+  background: rgba(252,216,77,0.05);
+}
+.form { max-width: 560px; margin: 32px auto 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.form input, .form textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  background: var(--gray-800);
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form input:focus { border-color: var(--brand-400); box-shadow: 0 0 0 3px rgba(147,209,247,0.1); }
+.form input::placeholder { color: var(--gray-500); }
+.form input[type="url"] { margin-bottom: 16px; }
+.form .btn { width: 100%; justify-content: center; }
+.sub-text { max-width: 480px; margin: 20px auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+/* === MODAL === */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  display: none; z-index: 300;
+  align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  box-shadow: var(--shadow-elevated);
+}
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer; color: var(--gray-500);
+}
+.modal h3 { margin-bottom: 8px; }
+.modal-sub { font-size: 0.88rem; color: var(--gray-700); margin-bottom: 24px; }
+.modal-form input, .modal-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border: 1.5px solid var(--gray-100);
+  border-radius: var(--radius-sm);
+  outline: none;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+.modal-form input:focus, .modal-form textarea:focus {
+  border-color: var(--brand-700);
+  box-shadow: 0 0 0 3px rgba(25,142,213,0.08);
+}
+.modal-form textarea { resize: vertical; min-height: 80px; }
+.modal-form .btn { width: 100%; justify-content: center; }
+
+/* === FOOTER === */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 64px 0 32px;
+}
+.foot__g {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+}
+.foot__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+.foot__desc { font-size: 0.82rem; color: var(--gray-500); margin-top: 8px; line-height: 1.5; }
+.foot__col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+}
+.foot__col a { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); padding: 4px 0; transition: color 0.2s; }
+.foot__col a:hover { color: var(--white); }
+.foot__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(var(--delay, 0) * 80ms);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === ACCESSIBILITY === */
+.btn:focus-visible,
+.faq-q:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brand-700);
+  outline-offset: 2px;
+}
+.form input:focus-visible,
+.modal-form input:focus-visible,
+.modal-form textarea:focus-visible {
+  outline: 2px solid var(--brand-700);
+  outline-offset: 1px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+  .typing-cursor { animation: none !important; opacity: 1; }
+  .btn, .card, .tl-step__content, .tl-step__marker, .feat { transition: none !important; }
+  html { scroll-behavior: auto !important; }
+}
+
+/* Hover guard — disable hover effects on touch devices */
+@media (hover: none) {
+  .card:hover { transform: none; box-shadow: var(--shadow-card); }
+  .pkg:hover { box-shadow: var(--shadow-card); }
+  .tl-step__content:hover { box-shadow: var(--shadow-card); }
+  .btn--p:hover { transform: none; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+  .stats-bento { grid-template-columns: repeat(2, 1fr); }
+  .stat--wide { grid-column: span 2; }
+  .cards-stagger { grid-template-columns: 1fr; }
+  .compare { grid-template-columns: 1fr; }
+  .compare__divider { height: 1px; }
+  .metrics-dash { grid-template-columns: 1fr 1fr; }
+  .metric--hero { grid-column: span 2; grid-row: span 1; }
+  .calc-layout { grid-template-columns: 1fr; }
+  .calc-out { position: static; }
+  .anti-grid { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .pkg--featured { transform: none; }
+  .founders { grid-template-columns: 1fr; }
+  .foot__g { grid-template-columns: 1fr; gap: 32px; }
+  .cta-mid .features { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .burger, .burger-cta { display: block !important; }
+  .hero-stats { grid-template-columns: 1fr; }
+  .stats-bento { grid-template-columns: 1fr; }
+  .stat--wide { grid-column: span 1; }
+  .metrics-dash { grid-template-columns: 1fr; }
+  .metric--hero { grid-column: span 1; }
+  .form-row { grid-template-columns: 1fr; }
+  .progress-tl { flex-direction: column; }
+  .progress-tl__seg { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
+}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- NAV -->
+<nav>
+<div class="c nav__inner">
+  <div class="nav__logo">WONDERFLOW</div>
+  <div class="nav-links">
+    <a href="#method">Method</a>
+    <a href="#case">Case Study</a>
+    <a href="#calc">Calculator</a>
+    <a href="#packages">Packages</a>
+    <a href="#cta-final" class="btn btn--p" style="padding:8px 20px;min-height:auto;font-size:.78rem">AI Visibility Audit →</a>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <a href="#cta-final" class="btn btn--p burger-cta" style="padding:8px 16px;font-size:.72rem;min-height:auto">Audit →</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#method" onclick="closeMobileMenu()">Method</a>
+    <a href="#case" onclick="closeMobileMenu()">Case Study</a>
+    <a href="#calc" onclick="closeMobileMenu()">Calculator</a>
+    <a href="#packages" onclick="closeMobileMenu()">Packages</a>
+    <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<div class="c hero__grid">
+  <div class="hero__content">
+    <div class="label">GEO Optimization · Wonderflow</div>
+    <h1>AI already recommends<br>your competitors.<br><br>Over 100&nbsp;million Americans<br>ask&nbsp;AI first.<br><span class="accent"><strong>Is your brand in&nbsp;the&nbsp;answer?</strong></span></h1>
+    <p class="hero__sub">One in three searches on Google now gets an AI-generated answer. The user picks whoever the AI names. <strong>We make sure AI platforms recommend your brand — and reinforce it through search.</strong></p>
+    <div class="hero__acts">
+      <a href="#cta-final" class="btn btn--p">Find out what AI says about you · $300 →</a>
+      <a href="#case" class="btn btn--o">See case study</a>
+    </div>
+    <p class="hero__micro">30 queries × 6 platforms · competitor analysis · report in 48h</p>
+  </div>
+  <div class="hero__visual">
+    <div class="chat-window">
+      <div class="chat-bar"><span></span><span></span><span></span></div>
+      <div class="chat-body">
+        <div class="chat-msg chat-msg--user">Who's the best GEO optimization agency for B2B?</div>
+        <div class="chat-msg chat-msg--ai">Based on my analysis, <strong>Wonderflow</strong> stands out for GEO optimization. Their proprietary CSQAF framework covers 6 major AI platforms including ChatGPT, Gemini, and Perplexity. They've demonstrated results like taking clients from 0% to 52% AI visibility in 4 months.<span class="typing-cursor">|</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c">
+  <div class="hero-stats">
+    <div class="hero-stat reveal" style="--delay:0"><div class="hero-stat__v" data-count="100" data-suffix="M+">100M+</div><div class="hero-stat__l">Americans use<br>AI search monthly</div></div>
+    <div class="hero-stat reveal" style="--delay:1"><div class="hero-stat__v">>30%</div><div class="hero-stat__l">of queries get<br>an AI answer</div></div>
+    <div class="hero-stat reveal" style="--delay:2"><div class="hero-stat__v">0→52%</div><div class="hero-stat__l">visibility growth<br>in 4 months</div></div>
+  </div>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- STATS -->
+<section id="scale">
+<div class="c">
+  <div class="label reveal">Gartner, SparkToro, BrightEdge · 2025–2026</div>
+  <h2 class="reveal" style="--delay:1">The way people find businesses<br>is fundamentally changing</h2>
+  <p class="reveal" style="max-width:640px;margin-top:16px;--delay:2">Google and Bing now embed AI answers directly in search. ChatGPT, Gemini, Perplexity, and Claude answer in seconds — your prospect gets a recommendation and acts on it. They might click a link, call, or just remember the brand. But they no longer scroll through ten blue links.</p>
+  <div class="stats-bento">
+    <div class="stat stat--wide stat--highlight reveal" style="--delay:0">
+      <div class="stat__n" data-count="30" data-prefix=">" data-suffix="%">>30%</div>
+      <div class="stat__l">of decisions made<br>without clicking a website</div>
+      <div class="stat__s">SparkToro, 2025</div>
+    </div>
+    <div class="stat reveal" style="--delay:1">
+      <div class="stat__n" data-count="87" data-suffix="%">87%</div>
+      <div class="stat__l">of SearchGPT links<br>match Bing top results</div>
+      <div class="stat__s">Ahrefs, 2025</div>
+    </div>
+    <div class="stat stat--highlight reveal" style="--delay:2">
+      <div class="stat__n" data-count="93" data-suffix="%">93%</div>
+      <div class="stat__l">zero-click rate in<br>Google AI Mode</div>
+      <div class="stat__s">SE Ranking, 2025</div>
+    </div>
+    <div class="stat reveal" style="--delay:3">
+      <div class="stat__n">–25%</div>
+      <div class="stat__l">drop in traditional<br>search by 2026</div>
+      <div class="stat__s">Gartner, 2024</div>
+    </div>
+  </div>
+  <div class="note reveal">75% of AI platforms (ChatGPT + Copilot) use Bing as their index. 28.3% of pages cited by ChatGPT are absent from Google Top-100. If you're not in Bing — you're invisible to ChatGPT.</div>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- CONSEQUENCES -->
+<section id="consequences">
+<div class="c">
+  <div class="label reveal">Try it yourself. Open ChatGPT and ask about your niche</div>
+  <h2 class="reveal" style="--delay:1">Three scenarios.<br>Each one worse than the last</h2>
+  <p class="reveal" style="max-width:640px;margin-top:16px;--delay:2">AI answers a question about your industry. Here's what might be happening right now.</p>
+  <div class="cards-stagger">
+    <div class="card card--red reveal" style="--delay:0">
+      <div class="card__tag-float">You're not mentioned</div>
+      <h3>AI recommends your competitor</h3>
+      <p>A prospect asked — AI named three competitors. You're not among them. The prospect won't double-check. They're already gone.</p>
+    </div>
+    <div class="card card--yellow reveal" style="--delay:1">
+      <div class="card__tag-float">Wrong information</div>
+      <h3>AI gives outdated or incorrect info</h3>
+      <p>Old pricing. A service you no longer offer. An address of a closed office. The prospect sees the mismatch — and loses trust.</p>
+    </div>
+    <div class="card card--dark reveal" style="--delay:2">
+      <div class="card__tag-float">Competitor took your spot</div>
+      <h3>AI cites your competitor as the industry expert</h3>
+      <p>Your competitor publishes articles, collects reviews, shows up on platforms. AI treats them as the authority. The longer you wait — the harder it gets to displace them.</p>
+    </div>
+  </div>
+  <div class="tizer reveal">
+    <div class="tizer__num">0% → 52%</div>
+    <div class="tizer__text">AI visibility in 4 months — <a href="#case">Noblerise case study ↓</a></div>
+  </div>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- SOLUTION -->
+<section id="solution">
+<div class="c">
+  <div class="label reveal">How we solve this</div>
+  <h2 class="reveal" style="--delay:1">GEO + SEO: your brand —<br>in AI answers and in search</h2>
+  <p class="reveal" style="max-width:640px;margin-top:16px;--delay:2">GEO makes your brand visible in AI-generated answers. SEO reinforces that through organic search traffic. We combine both channels into a single workflow.</p>
+  <div class="compare reveal" style="--delay:3">
+    <div class="compare__col compare__col--geo">
+      <div class="compare__tag">GEO</div>
+      <div class="compare__item"><strong>Where client sees you</strong>In ChatGPT, Google AI, Perplexity answers — by name, with a link</div>
+      <div class="compare__item"><strong>How they decide</strong>Gets a recommendation → finds the brand and reaches out</div>
+      <div class="compare__item"><strong>What it determines</strong>Which brand gets named by AI</div>
+      <div class="compare__item"><strong>First results</strong>2–3 months</div>
+    </div>
+    <div class="compare__divider"></div>
+    <div class="compare__col compare__col--seo">
+      <div class="compare__tag">SEO</div>
+      <div class="compare__item"><strong>Where client sees you</strong>In the list of search results on Google and Bing</div>
+      <div class="compare__item"><strong>How they decide</strong>Opens several websites → compares</div>
+      <div class="compare__item"><strong>What it determines</strong>Which website ranks higher</div>
+      <div class="compare__item"><strong>First results</strong>3–6 months</div>
+    </div>
+  </div>
+  <div class="note reveal">On screen — a link right in the AI answer. On voice assistants — a brand name the user remembers and searches for. Either way — the prospect arrives with built-in trust.</div>
+  <p style="margin-top:20px;font-size:.82rem;color:var(--gray-500)">Ahrefs, 75,000 brands: brands with presence on third-party platforms appear in AI answers 6.5x more often.</p>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- METHOD -->
+<section id="method">
+<div class="c">
+  <div class="label reveal">How it works. Transparent process</div>
+  <h2 class="reveal" style="--delay:1">Every step delivers<br>a measurable result</h2>
+  <p class="reveal" style="max-width:600px;margin-top:16px;--delay:2">Already have an SEO agency? We coordinate with them. One report, zero conflicts.</p>
+  <div class="timeline-v">
+    <div class="timeline-v__line"></div>
+    <div class="tl-step reveal" style="--delay:0"><div class="tl-step__marker">01</div><div class="tl-step__content"><h3>Audit & Strategy</h3><p>Deep SEO + GEO analysis. Reverse-engineering the top 10, keyword mapping, site structure blueprint, 6-month roadmap. Bing Webmaster Tools setup included.</p></div></div>
+    <div class="tl-step reveal" style="--delay:1"><div class="tl-step__marker">02</div><div class="tl-step__content"><h3>Foundation</h3><p>Technical infrastructure for AI crawlers: structured data (Schema), Google Business Profile, Bing index, IndexNow. Without this, AI can't find facts about your company.</p></div></div>
+    <div class="tl-step reveal" style="--delay:2"><div class="tl-step__marker">03</div><div class="tl-step__content"><h3>Content</h3><p>Articles, case studies, and expert answers built to the CSQAF standard*. Every piece of content is designed to be cited by AI and rank in search.</p></div></div>
+    <div class="tl-step reveal" style="--delay:3"><div class="tl-step__marker">04</div><div class="tl-step__content"><h3>Earned Media</h3><p>Reddit, LinkedIn, G2, Capterra, YouTube, industry directories. AI builds recommendations through triple verification — your brand must be confirmed across multiple independent sources.</p></div></div>
+    <div class="tl-step reveal" style="--delay:4"><div class="tl-step__marker">05</div><div class="tl-step__content"><h3>Monitoring</h3><p>Weekly AI Visibility Index. Response to changes — 48 hours.</p></div></div>
+  </div>
+  <p style="margin-top:24px;font-size:.8rem;color:var(--gray-500);line-height:1.6">* <strong style="color:var(--black)">CSQAF Standard</strong> — Wonderflow's internal framework. 5 signals AI uses to decide who to recommend: <strong>Citations</strong> · <strong>Statistics</strong> · <strong>Quotations</strong> · <strong>Authoritativeness</strong> · <strong>Freshness</strong></p>
+</div>
+</section>
+
+<!-- CTA MID — DARK -->
+<section class="cta-mid dark" id="cta-mid">
+<div class="c">
+  <h2>Find out what AI says<br>about your company</h2>
+  <div class="features">
+    <div class="feat reveal" style="--delay:0"><span class="feat-icon"><iconify-icon icon="solar:chart-bold"></iconify-icon></span><div><strong>AI Visibility Index</strong>Which AI platforms recommend you (top 6)</div></div>
+    <div class="feat reveal" style="--delay:1"><span class="feat-icon"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></span><div><strong>Competitor Map</strong>Who AI names instead of you, and why</div></div>
+    <div class="feat reveal" style="--delay:2"><span class="feat-icon"><iconify-icon icon="solar:danger-triangle-bold"></iconify-icon></span><div><strong>AI Errors</strong>Where AI gives wrong information about you</div></div>
+    <div class="feat reveal" style="--delay:3"><span class="feat-icon"><iconify-icon icon="solar:compass-bold"></iconify-icon></span><div><strong>Priority Areas</strong>What to focus on first for maximum impact</div></div>
+  </div>
+  <a href="#cta-final" class="btn btn--p">Get your AI Visibility Audit · $300 →</a>
+  <div class="micro">30 queries × 6 platforms · report in 48 hours</div>
+</div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="case">
+<div class="c">
+  <div class="label reveal">Case Study · Manufacturing · B2B</div>
+  <h2 class="reveal" style="--delay:1">Noblerise: from zero AI mentions<br>to first recommendation in 4 months</h2>
+  <p class="reveal" style="max-width:660px;margin-top:16px;--delay:2">EMS equipment manufacturer. ChatGPT and Perplexity recommended established competitors. Noblerise — 0 mentions out of 30 queries.</p>
+  <div class="metrics-dash">
+    <div class="metric metric--hero reveal" style="--delay:0"><div class="metric__v" data-count="52" data-prefix="0→" data-suffix="%">0→52%</div><div class="metric__l">AI Visibility Index</div></div>
+    <div class="metric reveal" style="--delay:1"><div class="metric__v">+34%</div><div class="metric__l">Organic traffic</div></div>
+    <div class="metric reveal" style="--delay:2"><div class="metric__v">70→55%</div><div class="metric__l">PPC dependency ↓</div></div>
+    <div class="metric reveal" style="--delay:3"><div class="metric__v">3 of 4</div><div class="metric__l">Platforms recommend</div></div>
+    <div class="metric reveal" style="--delay:4"><div class="metric__v">4 mo</div><div class="metric__l">To first inbound from AI</div></div>
+  </div>
+  <div class="progress-tl reveal" style="--delay:2">
+    <div class="progress-tl__seg"><div class="progress-tl__v">0%</div><div class="progress-tl__l">Start</div></div>
+    <div class="progress-tl__seg"><div class="progress-tl__v">8%</div><div class="progress-tl__l">Month 1</div></div>
+    <div class="progress-tl__seg"><div class="progress-tl__v">22%</div><div class="progress-tl__l">Month 2</div></div>
+    <div class="progress-tl__seg"><div class="progress-tl__v">38%</div><div class="progress-tl__l">Month 3</div></div>
+    <div class="progress-tl__seg"><div class="progress-tl__v">52%</div><div class="progress-tl__l">Month 4</div></div>
+  </div>
+  <div class="quote-block reveal">
+    <div class="quote-block__mark">"</div>
+    <div class="quote-block__text">"Prospects started calling and saying: ChatGPT recommended you. That's a channel we simply didn't have before."</div>
+    <cite>— CEO, Noblerise</cite>
+  </div>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- TRUST -->
+<section id="trust">
+<div class="c">
+  <div class="label reveal">About us — Wonderflow</div>
+  <h2 class="reveal" style="--delay:1">Proprietary methodology.<br>6 major AI platforms covered</h2>
+  <p class="reveal" style="max-width:640px;margin-top:16px;--delay:2">Our own GEO framework. 6 AI platforms. Built on 10+ years of search marketing and content strategy.</p>
+  <div class="trust-pills reveal" style="--delay:3">
+    <span class="niche">B2B SaaS</span>
+    <span class="niche">Manufacturing</span>
+    <span class="niche">Real Estate</span>
+    <span class="niche">Professional Services</span>
+    <span class="niche">Healthcare</span>
+  </div>
+  <div class="platforms reveal" style="--delay:5">
+    <span class="plat">ChatGPT / Bing</span>
+    <span class="plat">Google AI / Gemini</span>
+    <span class="plat">Perplexity</span>
+    <span class="plat">Claude</span>
+    <span class="plat">Copilot</span>
+    <span class="plat">DeepSeek</span>
+  </div>
+  <div class="founders reveal" style="--delay:6">
+    <div class="founder">
+      <div class="founder__photo">M</div>
+      <div>
+        <div class="founder__name">Michael</div>
+        <div class="founder__role">Co-Founder</div>
+        <div class="founder__bio">Co-founded <a href="https://wonderflow.agency" target="_blank">Wonderflow</a> over a decade ago, starting in SEO — now leads one of the first agencies to specialize in AI visibility. Runs traffic, analytics, GEO and AIO.</div>
+      </div>
+    </div>
+    <div class="founder">
+      <div class="founder__photo">A</div>
+      <div>
+        <div class="founder__name">Alexander</div>
+        <div class="founder__role">Co-Founder</div>
+        <div class="founder__bio">Co-founded <a href="https://wonderflow.agency" target="_blank">Wonderflow</a> over a decade ago to bring systematic growth to B2B companies across the US and Europe. Serial entrepreneur. Leads digital strategy and operations.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- CALCULATOR -->
+<section id="calc">
+<div class="c">
+  <div class="label reveal">Calculator</div>
+  <h2 class="reveal" style="--delay:1">How many prospects are you losing<br>through AI — and what's it costing you</h2>
+  <p class="reveal" style="max-width:600px;margin-top:16px;--delay:2">Four sliders. 10 seconds. An estimate of your losses in the AI channel.</p>
+  <div class="calc-layout">
+    <div class="calc-in">
+      <div class="calc-row">
+        <div class="calc-label"><span>Monthly search queries in your niche</span><span class="calc-val" id="v-queries">20,000</span></div>
+        <input type="range" class="calc-range" id="c-queries" min="1000" max="200000" step="1000" value="20000" oninput="calcUpdate()" aria-label="Monthly search queries">
+        <p class="calc-hint">~32% get an AI answer. That many people receive a recommendation without clicking.</p>
+      </div>
+      <div class="calc-row">
+        <div class="calc-label"><span>Average deal size</span><span class="calc-val" id="v-check">$5,000</span></div>
+        <input type="range" class="calc-range" id="c-check" min="500" max="50000" step="500" value="5000" oninput="calcUpdate()" aria-label="Average deal size">
+        <p class="calc-hint">Converting missed queries to dollars. Using a conservative 3% conversion rate.</p>
+      </div>
+      <div class="calc-row">
+        <div class="calc-label"><span>Sales close rate</span><span class="calc-val" id="v-sales">30%</span></div>
+        <input type="range" class="calc-range" id="c-sales" min="5" max="100" step="5" value="30" oninput="calcUpdate()" aria-label="Sales close rate">
+        <p class="calc-hint">Lead ≠ sale. What % of leads does your sales team close?</p>
+      </div>
+      <div class="calc-row">
+        <div class="calc-label"><span>Current AI visibility</span><span class="calc-val" id="v-vis">0%</span></div>
+        <input type="range" class="calc-range" id="c-vis" min="0" max="100" step="5" value="0" oninput="calcUpdate()" aria-label="Current AI visibility">
+        <p class="calc-hint">0% = you're in none of the AI answers. Reality for 90% of businesses.</p>
+      </div>
+    </div>
+    <div class="calc-out">
+      <div class="calc-res-title">Your estimate</div>
+      <div class="calc-metric"><div class="calc-metric__v" id="r-queries">6,400</div><div class="calc-metric__l">AI queries/month going to competitors</div></div>
+      <div class="calc-metric calc-metric--losses"><div class="calc-metric__v" id="r-lost">–</div><div class="calc-metric__l">Lost revenue from AI channels / month</div></div>
+      <div class="calc-metric calc-metric--roi"><div class="calc-metric__v" id="r-roi">–</div><div class="calc-metric__l">Estimated ROI of GEO over 6 months at 45% visibility</div></div>
+      <div id="r-note" style="font-size:.78rem;color:var(--gray-500);margin-top:12px;line-height:1.5">At 0% visibility you're not present in any of the AI answers in your niche.</div>
+      <a href="#cta-final" class="btn btn--p" style="width:100%;justify-content:center;margin-top:20px">Get your exact AI visibility · $300 →</a>
+      <p style="font-size:.72rem;color:var(--gray-500);text-align:center;margin-top:10px">This is an estimate. Precise audit — in 48 hours.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ANTI-OFFER — DARK -->
+<section id="anti-offer">
+<div class="c">
+  <div class="label reveal">Who this is NOT for</div>
+  <h2 style="color:#fff;margin-top:16px" class="reveal" style="--delay:1">This won't work for everyone.<br>You definitely <span style="text-decoration:underline;text-decoration-color:var(--accent-red)">DON'T need</span> this if:</h2>
+  <div class="anti-grid">
+    <div class="anti-card reveal" style="--delay:0">
+      <iconify-icon icon="solar:close-circle-bold" class="anti-icon"></iconify-icon>
+      <h3>You sell commodity products</h3>
+      <p>If you're selling phone cases on Amazon, GEO won't pay off. AI works best for B2B, SaaS, professional services, healthcare, and complex offerings where trust matters.</p>
+    </div>
+    <div class="anti-card reveal" style="--delay:1">
+      <iconify-icon icon="solar:close-circle-bold" class="anti-icon"></iconify-icon>
+      <h3>Your online reputation is poor</h3>
+      <p>AI is a mirror. If 80% of your reviews on G2, Yelp, or Google are negative, no AI will recommend you until you fix the fundamentals.</p>
+    </div>
+    <div class="anti-card reveal" style="--delay:2">
+      <iconify-icon icon="solar:close-circle-bold" class="anti-icon"></iconify-icon>
+      <h3>You need "leads by Friday"</h3>
+      <p>GEO is structural work. First mentions in AI answers appear 2–3 months after implementation. This is a long game, not traffic arbitrage.</p>
+    </div>
+  </div>
+  <div style="margin-top:40px;text-align:center;color:rgba(255,255,255,.5);font-size:0.9rem">
+    <p>If none of the above applies to you and you're ready to capture AI traffic — let's talk.</p>
+  </div>
+</div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+<div class="c">
+  <div class="label reveal">Three steps. Each with a clear outcome</div>
+  <h2 class="reveal" style="--delay:1">From audit — to consistent<br>AI recommendations</h2>
+  <div class="packages-grid">
+    <div class="pkg reveal" style="--delay:0">
+      <h3>Diagnostics</h3>
+      <div class="pkg__desc">What does AI know about you? Who does it recommend?</div>
+      <div class="pkg__price-strip"><div class="pkg__price">$300 <span>one-time</span></div></div>
+      <ul class="pkg__list">
+        <li>30 queries × 6 platforms</li>
+        <li>Competitor map in AI</li>
+        <li>AI error detection</li>
+        <li>AI Visibility Index</li>
+        <li>Trust Score assessment</li>
+        <li>Brand mention map</li>
+        <li>Starter checklist</li>
+      </ul>
+      <a href="#cta-final" class="btn btn--o">Get Diagnostics</a>
+    </div>
+    <div class="pkg pkg--featured reveal" style="--delay:1">
+      <div class="pkg__badge">Required step</div>
+      <h3>Strategy</h3>
+      <div class="pkg__desc">AI visibility strategy: full GEO + SEO growth plan</div>
+      <div class="pkg__price-strip"><div class="pkg__price">$3,900 <span>project</span></div></div>
+      <ul class="pkg__list">
+        <li>Reverse-engineering Top 10</li>
+        <li>Keyword mapping (SEO + GEO)</li>
+        <li>Site structure blueprint</li>
+        <li>Technical audit + spec</li>
+        <li>Earned media audit</li>
+        <li>6-month roadmap</li>
+      </ul>
+      <a href="#modal-strategy" class="btn btn--p" onclick="document.getElementById('modal-strategy').classList.add('active');return false">Start with Strategy</a>
+    </div>
+    <div class="pkg pkg--locked reveal" style="--delay:2">
+      <h3>Growth</h3>
+      <div class="pkg__desc">Executing the GEO + SEO strategy</div>
+      <div class="pkg__price-strip"><div class="pkg__price">from $3,500 <span>/month</span></div></div>
+      <ul class="pkg__list">
+        <li>Site improvements</li>
+        <li>4–6 articles/month</li>
+        <li>Schema, Google Business, Bing</li>
+        <li>Earned media: Reddit, G2, LinkedIn</li>
+        <li>AI visibility monitoring</li>
+        <li>Monthly status report</li>
+      </ul>
+      <div class="btn btn--o" style="opacity:.5;cursor:default">→ Available after Strategy</div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:20px;font-size:.82rem;color:var(--gray-500)">For market leaders — <strong style="color:var(--black)">"Domination"</strong> ($8,000–$12,000/mo): Tier-1 media PR, YouTube, proprietary data reports.</p>
+</div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- FAQ -->
+<section id="faq" itemscope itemtype="https://schema.org/FAQPage">
+<div class="c">
+  <div class="label reveal">Questions we hear before the first call</div>
+  <h2 class="reveal" style="--delay:1">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">What is GEO and why does my business need it?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">GEO stands for Generative Engine Optimization. When a prospect asks ChatGPT, Gemini, or Perplexity "who's the best in [your niche]" — your brand shows up in the answer. Over 30% of searches on Google now produce an AI answer, and users act on the AI's recommendation without clicking through to websites. If you're not in the answer — you're losing deals you'll never even know about.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">How is GEO different from SEO?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">SEO gets you into the top 10 links on Google and Bing. GEO gets you into the AI-generated answer itself, where the AI names your brand directly. The key difference: in GEO, what matters most isn't backlinks — it's mentions across third-party platforms like Reddit, G2, LinkedIn, and YouTube. We build each piece of content to work for both channels using our CSQAF framework.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">How soon will I see results?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">First 2 months — foundation: site improvements, Schema markup, Google Business, Bing index, structured data. From month 3 — AI visibility grows through content and earned media. In the Noblerise case, starting from 0% visibility, they reached 52% and started receiving inbound leads from ChatGPT within 4 months. Minimum engagement is 6 months because SEO and GEO are compounding channels: each month builds on the previous one.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">We already have an SEO agency. How does this work together?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">GEO is a layer on top of SEO — we don't interfere with your current agency's work. We get on a call with them, divide responsibilities, and deliver one consolidated report. If you don't have an SEO agency — we cover both. One vendor instead of two, one budget, one report.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">How do you measure results and ROI?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">Search rankings, traffic, leads — same as any SEO report. Plus the AI Visibility Index: how many AI platforms mention your brand across 30 queries, on which platform, in what context. Monthly call with before/after screenshots and trend data. AI-referred traffic converts at roughly 2x the rate of organic — visible in your CRM.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">Is this white-hat? Any risks?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">100% white-hat. SEO, structured data, expert content, earned media, reviews on Google and G2. No gray-hat tactics — we simply help AI find accurate information about your company through sources it already trusts.</div></div></div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')"><span itemprop="name">Will GEO replace Google Ads?</span><span class="faq-q__icon">+</span></button><div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="faq-a__inner" itemprop="text">No. GEO is an additional channel, not a replacement. CPCs on Google Ads keep rising 15–20% year over year — depending on a single source is risky. Our clients see their paid ad dependency drop from 70% to 50–55%, while total lead volume grows. GEO is a free channel with high trust. It works 24/7 and doesn't depend on ad spend.</div></div></div>
+  </div>
+</div>
+</section>
+
+<script type="application/ld+json">
+[
+  {"@context":"https://schema.org","@type":"Organization","name":"Wonderflow","url":"https://alexwf13.github.io/getgoodgeo/","description":"GEO + SEO agency: brand visibility in AI-generated answers and search.","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"hello@wonderflow.agency","areaServed":"US","availableLanguage":"English"}},
+  {"@context":"https://schema.org","@type":"WebSite","name":"Wonderflow — Get Good GEO","url":"https://alexwf13.github.io/getgoodgeo/"}
+]
+</script>
+
+<!-- CTA FINAL — DARK -->
+<section class="cta-final dark" id="cta-final">
+<div class="c">
+  <div class="label">Start here</div>
+  <h2 style="margin-top:16px">Find out if AI recommends&nbsp;your&nbsp;brand —<br>or&nbsp;only your&nbsp;competitors</h2>
+  <p>30 queries × 6 AI platforms. Competitor analysis. AI error map. Starter checklist. Report in&nbsp;48&nbsp;hours.</p>
+  <form class="form" onsubmit="return false">
+    <div class="form-row">
+      <input type="text" placeholder="Your name" required aria-label="Your name" autocomplete="name">
+      <input type="email" placeholder="Email" required aria-label="Email" autocomplete="email">
+    </div>
+    <input type="url" placeholder="Your website URL" required aria-label="Your website URL" autocomplete="url">
+    <button type="submit" class="btn btn--p">Get your AI Visibility Audit · $300</button>
+  </form>
+  <p class="sub-text">Noblerise started at zero visibility — 4 months later, 52% and inbound leads from AI. 90% of the market doesn't even know about GEO yet. In your niche, chances are nobody's doing this.</p>
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-strategy" onclick="if(event.target===this)this.classList.remove('active')">
+  <div class="modal">
+    <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">&times;</button>
+    <h3>Start with Strategy</h3>
+    <p class="modal-sub">Deep SEO + GEO analysis of your business. Reverse-engineering top 10, keyword mapping, site structure blueprint, roadmap. 2–4 weeks, $3,900.</p>
+    <form class="modal-form" onsubmit="return false">
+      <input type="text" placeholder="Your name" required aria-label="Your name" autocomplete="name">
+      <input type="email" placeholder="Email" required aria-label="Email" autocomplete="email">
+      <input type="url" placeholder="Website URL" aria-label="Website URL" autocomplete="url">
+      <textarea placeholder="Tell us about your project (optional)" aria-label="Project description"></textarea>
+      <button type="submit" class="btn btn--p">Request Strategy Consultation</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer itemscope itemtype="https://schema.org/Organization">
+<meta itemprop="name" content="Wonderflow Agency">
+<meta itemprop="url" content="https://alexwf13.github.io/getgoodgeo/">
+<div class="c">
+  <div class="foot__g">
+    <div>
+      <div class="foot__brand" itemprop="alternateName">WONDERFLOW</div>
+      <p class="foot__desc" itemprop="description">GEO optimization. Brand visibility in&nbsp;AI-generated answers.</p>
+    </div>
+    <div class="foot__col">
+      <h4>Services</h4>
+      <a href="#method">Methodology</a>
+      <a href="#packages">Packages</a>
+      <a href="#cta-final">Diagnostics</a>
+      <a href="#case">Case Study</a>
+    </div>
+    <div class="foot__col">
+      <h4>Contact</h4>
+      <a href="mailto:hello@wonderflow.agency" itemprop="email">hello@wonderflow.agency</a>
+      <a href="https://linkedin.com/company/wonderflow">LinkedIn</a>
+    </div>
+  </div>
+  <div class="foot__bottom">
+    <span>© <span itemprop="foundingDate">2026</span> Wonderflow</span>
+    <span>getgoodgeo.com</span>
+  </div>
+</div>
+</footer>
+
+<script>
+/* Calculator */
+function fmt(n){
+  if(n>=1000000) return '$'+(n/1000000).toFixed(1)+'M';
+  if(n>=1000) return '$'+Math.round(n/1000)+'K';
+  return '$'+n.toLocaleString('en-US');
+}
+function fmtN(n){ return n.toLocaleString('en-US'); }
+function calcUpdate(){
+  const queries=+document.getElementById('c-queries').value;
+  const check=+document.getElementById('c-check').value;
+  const sales=+document.getElementById('c-sales').value;
+  const vis=+document.getElementById('c-vis').value;
+  document.getElementById('v-queries').textContent=fmtN(queries);
+  document.getElementById('v-check').textContent='$'+fmtN(check);
+  document.getElementById('v-sales').textContent=sales+'%';
+  document.getElementById('v-vis').textContent=vis+'%';
+  const aiTotal=Math.round(queries*0.32);
+  const aiLost=Math.round(aiTotal*(1-vis/100));
+  const leadRate=0.03;
+  const salesRate=sales/100;
+  const lostRev=Math.round(aiLost*leadRate*salesRate*check);
+  const geoCost=3500*6+3900;
+  const gained=Math.round(queries*0.32*0.45*leadRate*salesRate*check*6);
+  const roi=(gained/geoCost).toFixed(1);
+  document.getElementById('r-queries').textContent=fmtN(aiLost);
+  document.getElementById('r-lost').textContent=fmt(lostRev);
+  document.getElementById('r-roi').textContent='×'+roi;
+  let note='';
+  if(vis===0)note='At 0% visibility you\'re not present in any of the ~'+fmtN(aiTotal)+' AI answers per month in your niche.';
+  else if(vis<20)note='Visibility '+vis+'% — you\'re in the game, but '+fmtN(aiLost)+' queries still go to competitors.';
+  else if(vis<45)note='Good start! '+(45-vis)+'% left to reach the target 45%.';
+  else note='Great — visibility '+vis+'%. Goal: maintain position and expand your keyword coverage.';
+  document.getElementById('r-note').textContent=note;
+}
+calcUpdate();
+
+/* Burger */
+const burger=document.getElementById('burger');
+const mobileMenu=document.getElementById('mobile-menu');
+function closeMobileMenu(){burger.classList.remove('active');mobileMenu.classList.remove('active')}
+burger.addEventListener('click',()=>{burger.classList.toggle('active');mobileMenu.classList.toggle('active')});
+
+/* Scroll Progress */
+window.addEventListener('scroll',()=>{
+  const st=window.scrollY;
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('scroll-progress').style.width=(st/max*100)+'%';
+},{passive:true});
+
+/* Reveal */
+const revealObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('revealed');revealObs.unobserve(e.target);}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+/* CountUp */
+function countUp(el,target,duration,prefix,suffix){
+  let start=null;
+  function step(ts){
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/duration,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=prefix+Math.round(target*ease).toLocaleString('en-US')+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+const countObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const t=parseInt(e.target.dataset.count);
+      const pre=e.target.dataset.prefix||'';
+      const suf=e.target.dataset.suffix||'';
+      if(!isNaN(t)){countUp(e.target,t,1400,pre,suf);}
+      countObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
+</script>
+</body>
+</html>
